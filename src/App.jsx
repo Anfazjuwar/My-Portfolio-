@@ -10,6 +10,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import Skiils from "./pages/Skiils";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -26,6 +27,8 @@ function App() {
   }, []);
   return (
     <div className=" app bg-deep-blue">
+      {/* ... */}
+      <SpeedInsights />
       <NavBar
         isTopofPage={isTopofPage}
         setSelectedPage={setSelectedPage}
