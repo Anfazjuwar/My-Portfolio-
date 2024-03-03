@@ -37,7 +37,7 @@ const Landing = ({ setSelectedPage, selectedPage }) => {
         )}
       </div>
       {/* main section */}
-      <div className="z-30 mt-12 ml-16 basis-2/5 md:mt-32">
+      <div className="z-30 mt-12 ml-18 md:ml-24 basis-2/5 md:mt-32">
         <motion.div
           initial="hidden"
           whileInView="visible"

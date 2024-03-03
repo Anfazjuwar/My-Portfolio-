@@ -53,7 +53,11 @@ const Contact = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <img src={img1} alt="contact" className="rounded-2xl saturate-200" />
+          <img
+            src={img1}
+            alt="contact"
+            className="shadow-md rounded-3xl saturate-200 shadow-red"
+          />
         </motion.div>
         <motion.div
           className="mt-10 basis-1/2 md:mt-0"
