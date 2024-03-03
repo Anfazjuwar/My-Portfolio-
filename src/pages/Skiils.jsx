@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Skiils = () => {
   return (
     <section id="skills" className="pt-10 pb-24">
-      <div className="mt-32 md:flex md:justify-between ">
+      <div className="mt-36 md:flex md:justify-between ">
         <div>
           <motion.div
             className=" md:w-1/8"
