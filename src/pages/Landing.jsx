@@ -54,7 +54,7 @@ const Landing = ({ setSelectedPage, selectedPage }) => {
               Juwar
             </span>
           </p>
-          <p className="mt-10 text-xl text-center mb-7 md:text-start">
+          <p className="mt-10 text-xl text-center text-red mb-7 md:text-start">
             <TypeAnimation
               sequence={[
                 "Full Stack Devoloper", // initially rendered starting point
