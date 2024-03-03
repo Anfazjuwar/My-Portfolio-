@@ -176,13 +176,13 @@ const Skiils = () => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className="mt-4 mb-5 text-3xl font-semibold md:mt-0 font-playfair">
+            <p className="mb-2 text-3xl font-semibold font-playfair">
               Professional <span className="text-red">SKILLS</span>
             </p>
             <LineGradient width="w-1/3" />
           </motion.div>
           <motion.div
-            className="grid grid-cols-2 gap-8 mt-4 space-y-2 md:space-y-0 md:mr-14 md:mt-8 md:gap-32 md:grid-cols-2 md:grid"
+            className="mt-6 space-y-12 md:space-y-0 md:mr-14 md:mt-8 md:gap-32 md:grid-cols-2 md:grid"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}

@@ -21,7 +21,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 };
 const NavBar = ({ isTopofPage, setSelectedPage, selectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
-  const isAboveSmallScreens = useMediaQuery("(min-width:868px)");
+  const isAboveSmallScreens = useMediaQuery("(min-width:800px)");
   const navbarBackground = isTopofPage ? "" : "bg-slate-950";
 
   return (
@@ -73,7 +73,7 @@ const NavBar = ({ isTopofPage, setSelectedPage, selectedPage }) => {
 
         {/* Mobile Menu pop */}
         {!isAboveSmallScreens && isMenuToggled && (
-          <div className="fixed bottom-0 right-0 h-full bg-slate-950 bg-opacity-90  w-[300px] ">
+          <div className="fixed bottom-0 right-0 h-full bg-slate-950   w-[300px] ">
             <div className="flex justify-end pt-4 pr-8 p-13">
               <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
                 <RiMenuFoldLine className="mb-4 text-3xl text-blue" />

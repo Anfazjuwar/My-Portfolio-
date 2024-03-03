@@ -71,8 +71,8 @@ const Projects = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="flex justify-center text-center items-center p-10  max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
-            COMPLITED PROJECTS
+          <div className=" uppercase flex justify-center text-center items-center p-10  max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
+            Completed PROJECTS
           </div>
           <Project
             title={"E-commerce"}
