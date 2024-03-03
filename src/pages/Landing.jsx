@@ -14,28 +14,40 @@ const Landing = ({ setSelectedPage, selectedPage }) => {
       className="gap-16 py-10 md:flex md:justify-between md:items-center md:h-full"
     >
       {/* Imge Section */}
-      <div className="z-10 flex justify-center mt-16 basis-3/5 md:mt-32 md:order-2">
-        {" "}
-        {isAbovemediumScreen ? (
-          <div
-            className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px]
+      <motion.div
+        className="z-10 flex justify-center mt-16 basis-3/5 md:mt-32 md:order-2"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, y: -50 },
+          visible: { opacity: 1, y: -2 },
+        }}
+      >
+        <div>
+          {" "}
+          {isAbovemediumScreen ? (
+            <div
+              className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px]
      before:w-full before:max-w-[400px] md:before:max-w-[600px] before:h-full before:border-2 before:border-blue before:z-[-1] before:shadow-2xl before:shadow-rose-50"
-          >
-            {" "}
+            >
+              {" "}
+              <img
+                alt="profile"
+                src={profile}
+                className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[500px] rounded-t-full shadow-2xl before:shadow-rose-600"
+              />
+            </div>
+          ) : (
             <img
               alt="profile"
               src={profile}
-              className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[500px] rounded-t-full shadow-2xl before:shadow-rose-600"
+              className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[350px] md:max-w-[450px] rounded-t-full shadow-md shadow-rose-600 "
             />
-          </div>
-        ) : (
-          <img
-            alt="profile"
-            src={profile}
-            className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[500px] rounded-t-full"
-          />
-        )}
-      </div>
+          )}
+        </div>
+      </motion.div>
       {/* main section */}
       <div className="z-30 mt-12 ml-18 md:ml-24 basis-2/5 md:mt-32">
         <motion.div
@@ -58,11 +70,11 @@ const Landing = ({ setSelectedPage, selectedPage }) => {
             <TypeAnimation
               sequence={[
                 "Full Stack Devoloper", // initially rendered starting point
-                1000,
+                500,
                 "Full Stack Devoloper",
-                1000,
+                500,
               ]}
-              speed={50}
+              speed={0}
               style={{ fontSize: "2em" }}
               repeat={Infinity}
             />

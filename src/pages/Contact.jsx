@@ -1,24 +1,51 @@
-import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import LineGradient from "../componets/LineGradient";
 import img1 from "../assets/awsome.jpeg";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
+import Messgealert from "../componets/Messgealert";
 
 const Contact = () => {
-  const {
-    register, //undifed the input field in form
-    handleSubmit, //handles the submit event of the form.
-    trigger, //valdtion
-    formState: { errors }, //errors
-  } = useForm();
+  const [showMessageAlert, setShowMessageAlert] = useState(false);
+  const [formData, setFormData] = useState({
+    user_name: "",
+    user_email: "",
+    message: "",
+  });
 
-  const onsumbit = async (e) => {
-    const isvalid = await trigger();
-    if (!isvalid) {
-      e.preventDefault();
-    }
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        `${import.meta.env.VITE_YOUR_SERVICE_ID}`,
+        `${import.meta.env.VITE_YOUR_TEMPLATE_ID}`,
+        form.current,
+        {
+          publicKey: `${import.meta.env.VITE_APP_YOUR_PUBLIC_KEY}`,
+        }
+      )
+      .then(
+        () => {
+          setShowMessageAlert(true);
+          setFormData({
+            user_name: "",
+            user_email: "",
+            message: "",
+          });
+          setTimeout(() => setShowMessageAlert(false), 5000);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
   return (
     <section id="contact" className="py-48">
+      {showMessageAlert && <Messgealert />}
       {/* Heading */}
       <motion.div
         className="flex justify-end w-full"
@@ -70,66 +97,49 @@ const Contact = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <form
-            target="_blank"
-            onSubmit={onsumbit}
-            action="https://formsubmit.co/9d22029eedab4d91bd95495a5ca6511d"
-            method="POST"
-          >
+          <form ref={form} onSubmit={sendEmail}>
             <input
               className="w-full p-3 font-semibold bg-blue placeholder:bg-opaque-black"
               type="text"
+              name="user_name"
               placeholder="NAME"
-              {...register("name", {
-                required: true,
-                maxLength: 100,
-              })}
+              required
+              value={formData.user_name}
+              onChange={(e) =>
+                setFormData({ ...formData, user_name: e.target.value })
+              }
             />
-            {errors.name && (
-              <p className="mt-1 uppercase text-red">
-                {errors.name.type === "required" && "This Field is Required"}
-                {errors.name.type === "maxLength" && "max length is 100 Char"}
-              </p>
-            )}
 
             <input
               className="w-full p-3 mt-5 font-semibold bg-blue placeholder:bg-opaque-black"
-              type="text"
+              type="email"
+              name="user_email"
               placeholder="EMAIL"
-              {...register("email", {
-                required: true,
-                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              })}
+              required
+              value={formData.user_email}
+              onChange={(e) =>
+                setFormData({ ...formData, user_email: e.target.value })
+              }
             />
-            {errors.email && (
-              <p className="mt-1 uppercase text-red">
-                {errors.name.type === "required" && "This Field is Required"}
-                {errors.email.type === "pattern" && "max length is 100 Char"}
-              </p>
-            )}
+
             <textarea
               className="w-full p-3 mt-5 font-semibold bg-blue placeholder:bg-opaque-black"
-              type="text"
+              name="message"
               rows={4}
               cols={50}
               placeholder="MESSAGE"
-              {...register("message", {
-                required: true,
-                maxLength: 2000,
-              })}
-            />
-            {errors.message && (
-              <p className="mt-1 uppercase text-red">
-                {errors.message.type === "required" && "This Field is Required"}
-                {errors.message.type === "maxLength" &&
-                  "max length is 100 Char"}
-              </p>
-            )}
+              required
+              value={formData.message}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
+            ></textarea>
+
             <button
               type="submit"
-              className="p-5 mt-5 font-semibold transition duration-500 bg-yellow text-deep-blue hover:bg-red hover:text-white "
+              className="p-5 mt-5 font-semibold transition duration-500 bg-yellow text-deep-blue hover:bg-red hover:text-white"
             >
-              send me a meassge
+              send me a message
             </button>
           </form>
         </motion.div>

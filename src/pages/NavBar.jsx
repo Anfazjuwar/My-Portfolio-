@@ -3,6 +3,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 import menuIcon from "../assets/menu-icon.svg";
 import closeIcon from "../assets/close-icon.svg";
+import { RiMenuFoldLine } from "react-icons/ri";
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
@@ -72,15 +73,15 @@ const NavBar = ({ isTopofPage, setSelectedPage, selectedPage }) => {
 
         {/* Mobile Menu pop */}
         {!isAboveSmallScreens && isMenuToggled && (
-          <div className="fixed bottom-0 right-0 h-full bg-slate-950  w-[300px] ">
-            <div className="flex justify-end pt-2 pr-6 p-13">
+          <div className="fixed bottom-0 right-0 h-full bg-slate-950 bg-opacity-90  w-[300px] ">
+            <div className="flex justify-end pt-4 pr-8 p-13">
               <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                <img alt="'menu-icon" src={closeIcon} />
+                <RiMenuFoldLine className="mb-4 text-3xl text-blue" />
               </button>
             </div>
             {/* menu itens */}
 
-            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-blue">
+            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-red">
               <Link
                 page="Home"
                 selectedPage={selectedPage}

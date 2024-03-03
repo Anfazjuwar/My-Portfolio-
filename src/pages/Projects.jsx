@@ -43,7 +43,7 @@ const Projects = () => {
     <section id="projects" className="pt-48 pb-48 ">
       {/* heading */}
       <motion.div
-        className="mx-auto text-center md:w-2-4"
+        className="mx-auto mb-8 text-center md:w-2-4"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -61,16 +61,11 @@ const Projects = () => {
             <LineGradient width="w-1/3" />
           </div>
         </div>
-
-        <p className="mt-10 mb-10">
-          Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-          fames odio in at.
-        </p>
       </motion.div>
       {/* Projects */}
       <div className="flex justify-center">
         <motion.div
-          className="sm:grid sm:grid-cols-3"
+          className="md:grid md:grid-cols-3"
           variants={container}
           initial="hidden"
           whileInView="visible"
@@ -116,7 +111,7 @@ const Projects = () => {
         </motion.div>
       </div>
       <div className="flex items-center justify-center mt-10 mb-4 text-2xl font-semibold text-center uppercase font-playfair">
-        More Projects are coming <span className="text-red">soon!</span>
+        More Projects are coming <span className=" text-red">Soon!</span>
       </div>
       <LineGradient className="mt-12" />
     </section>
