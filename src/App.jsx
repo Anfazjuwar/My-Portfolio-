@@ -26,7 +26,7 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className=" app bg-deep-blue">
+    <div className="w-full app bg-deep-blue">
       {/* ... */}
       <SpeedInsights />
       <NavBar

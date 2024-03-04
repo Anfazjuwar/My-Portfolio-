@@ -31,7 +31,7 @@ const Project = ({ title, imges, about }) => {
         <p>{about}</p>
       </div>
       <img
-        className="saturate-200 max-w-[400px]  max-h-[400px] "
+        className="saturate-200 sm:max-w-[400px] sm:max-h-[400px] "
         src={imges}
         alt={`Project ${title}`}
       />
