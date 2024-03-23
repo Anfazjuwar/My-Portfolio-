@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
 import NavBar from "./pages/NavBar";
 import DotGroup from "./pages/DotGroup";
