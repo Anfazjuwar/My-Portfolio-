@@ -3,9 +3,18 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import Skills from "../assets/cmimage.jpeg";
 import resume from "../assets/Resume.pdf";
+// import { useScroll, useTransform } from "framer-motion";
+// import { useRef } from "react";
 
 const MySkills = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+
+  // const refs = useRef < HTMLDivElement > null;
+  // const { scrollYProgress } = useScroll({
+  //   target: "",
+  //   offset: ["0 1", "1.33 1"],
+  // });
+  // const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
   return (
     <section id="about" className="pt-10 pb-24">
@@ -33,11 +42,11 @@ const MySkills = () => {
                 Dynamic and dedicated Full Stack Web Developer with a passion
                 for creating responsive, user-friendly web applications.
                 Proficient in a variety of technologies including React,
-                Tailwind CSS, CSS, JavaScript, MongoDB, Mongoose, Postman,
-                Node.js, Express.js, and Redux. Eager to leverage skills and
-                knowledge gained throug higher Diploma in Computing and Software
-                Engineering to contribute effectively to innovative projects in
-                the tech industry.
+                Next.js, TypeScript, Tailwind CSS, CSS, JavaScript, MongoDB,
+                Mongoose, Postman, Node.js, Express.js, and Redux. Eager to
+                leverage skills and knowledge gained through a Higher Diploma in
+                Computing and Software Engineering to contribute effectively to
+                innovative projects in the tech industry.
               </p>
             </div>
           </motion.div>

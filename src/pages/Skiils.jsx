@@ -65,7 +65,7 @@ const Skiils = () => {
               </div>
               <div className="flex justify-between mb-1">
                 <span className="text-base font-medium text-blue-700 dark:text-white">
-                  CSS <span className="text-red">& </span>Tailwind CSS
+                  Tailwind CSS
                 </span>
                 <span className="text-sm font-medium text-blue-700 dark:text-white">
                   80%
@@ -93,7 +93,7 @@ const Skiils = () => {
               </div>
               <div className="flex justify-between mb-1">
                 <span className="text-base font-medium text-blue-700 dark:text-white">
-                  MongoDB <span className="text-red">& </span> Mongoose
+                  MongoDB
                 </span>
                 <span className="text-sm font-medium text-blue-700 dark:text-white">
                   70%
@@ -142,17 +142,17 @@ const Skiils = () => {
             <div className="space-x-2">
               <p className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
                 <span className="uppercase relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                  Sql
+                  Next.js
                 </span>
               </p>
               <p className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
                 <span className="uppercase relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                  php
+                  TypeScript
                 </span>
               </p>
               <p className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
                 <span className="uppercase relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                  python
+                  Mongoose
                 </span>
               </p>
               <p className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
@@ -182,7 +182,7 @@ const Skiils = () => {
             <LineGradient width="w-1/3" />
           </motion.div>
           <motion.div
-            className="mt-6 space-y-12 md:space-y-0 md:mr-14 md:mt-8 md:gap-32 md:grid-cols-2 md:grid"
+            className="flex flex-col items-center justify-center mt-6 space-y-12 md:space-y-0 md:mr-14 md:mt-8 md:gap-32 md:grid-cols-2 md:grid"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}

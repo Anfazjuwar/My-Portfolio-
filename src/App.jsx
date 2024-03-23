@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
 import NavBar from "./pages/NavBar";
 import DotGroup from "./pages/DotGroup";
@@ -25,6 +25,7 @@ function App() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <div className="w-full app bg-deep-blue">
       {/* ... */}
