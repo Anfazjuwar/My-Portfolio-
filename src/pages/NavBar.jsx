@@ -144,17 +144,32 @@ const NavBar = ({ isTopofPage, setSelectedPage, selectedPage }) => {
             </div>
           </div>
         ) : (
-          <button
-            className="p-2 rounded-full bg-red"
-            onClick={() => setIsMenuToggled(!isMenuToggled)}
-          >
-            <img alt="'menu-icon" src={menuIcon} />
-          </button>
+          <>
+            <div>
+              {options?.map((opt) => (
+                <button
+                  key={opt.text}
+                  onClick={() => setTheme(opt.text)}
+                  className={`w-8 h-8 m-1 text-xl leading-9 rounded-full text-sky-600  ${
+                    theme === opt.text && "text-sky-600"
+                  }`}
+                >
+                  <ion-icon name={opt.icon}></ion-icon>
+                </button>
+              ))}
+            </div>
+            <button
+              className="p-2 rounded-full bg-red"
+              onClick={() => setIsMenuToggled(!isMenuToggled)}
+            >
+              <img alt="'menu-icon" src={menuIcon} />
+            </button>
+          </>
         )}
 
         {/* Mobile Menu pop */}
         {!isAboveSmallScreens && isMenuToggled && (
-          <div className="fixed bottom-0 right-0 h-full bg-white   w-[300px] text-black duration-100  bg-gray-100 dark:bg-deep-blue text-white dark:text-white   ">
+          <div className="fixed bottom-0 right-0 h-full    w-[300px] text-black duration-100  bg-gray-100 dark:bg-deep-blue dark:text-white   ">
             <div className="flex justify-end pt-4 pr-8 p-13">
               <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
                 <RiMenuFoldLine className="mb-4 text-3xl text-blue" />
@@ -183,29 +198,12 @@ const NavBar = ({ isTopofPage, setSelectedPage, selectedPage }) => {
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              {/* <Link
-                page="Testimonials"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              /> */}
+
               <Link
                 page="Contact"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <div>
-                {options?.map((opt) => (
-                  <button
-                    key={opt.text}
-                    onClick={() => setTheme(opt.text)}
-                    className={`w-8 h-8 m-1 text-xl leading-9 rounded-full ${
-                      theme === opt.text && "text-sky-600"
-                    }`}
-                  >
-                    <ion-icon name={opt.icon}></ion-icon>
-                  </button>
-                ))}
-              </div>
             </div>
           </div>
         )}
