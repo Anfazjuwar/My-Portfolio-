@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Skiils = () => {
   return (
-    <section id="skills" className="pt-10 pb-24 text-black dark:text-white">
+    <section id="skills" className="pt-2 text-black pb-18 dark:text-white">
       <div className="mt-36 md:flex md:justify-between ">
         <div>
           <motion.div

@@ -36,7 +36,7 @@ const Sliding = () => {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(nextlide, 5000);
+    const intervalId = setInterval(nextlide, 1000);
 
     return () => {
       clearInterval(intervalId);

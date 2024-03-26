@@ -44,7 +44,7 @@ const Contact = () => {
       );
   };
   return (
-    <section id="contact" className="py-48 text-black dark:text-white">
+    <section id="contact" className="py-4 text-black dark:text-white">
       {showMessageAlert && <Messgealert />}
       {/* Heading */}
       <motion.div

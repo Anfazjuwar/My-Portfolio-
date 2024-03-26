@@ -25,7 +25,7 @@ const MySkills = ({ setSelectedPage, selectedPage }) => {
             </div>
           </motion.div>
         </div>
-        <div className="w-full md:w-1/2">
+        <div className="w-full pt-4 md:w-1/2">
           {" "}
           <motion.div
             className=""
