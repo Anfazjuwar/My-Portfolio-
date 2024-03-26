@@ -33,7 +33,7 @@ const Landing = ({ setSelectedPage, selectedPage }) => {
             i'm
             <span className=" xs:font-semibold text-red"> Anfaz </span>
           </p>
-          <p className="flex items-center justify-center mt-4 mb-8 text-2xl text-centermb-7 md:text-start md:items start md:flex md:justify-start">
+          <p className="flex items-center justify-center mt-4 mb-8 text-sm md:text-2xl text-centermb-7 md:text-start md:items start md:flex md:justify-start">
             <TypeAnimation
               sequence={[
                 " MERN Stack Developer", // initially rendered starting point
