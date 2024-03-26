@@ -27,7 +27,7 @@ function App() {
   }, []);
 
   return (
-    <div className="w-full app bg-deep-blue">
+    <div className="w-full bg-white app dark:bg-deep-blue">
       {/* ... */}
       <SpeedInsights />
       <NavBar

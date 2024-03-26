@@ -8,7 +8,7 @@ import {
 
 const SocialMediaicons = () => {
   return (
-    <div className="flex justify-center my-10 md:justify-start gap-7">
+    <div className="flex justify-center my-10 text-black md:justify-start gap-7 dark:text-white">
       <a
         className="transition duration-500 hover:opacity-50"
         href="https://www.linkedin.com/in/muhammadhu-anfaz-174a12287"

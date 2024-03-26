@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Skiils = () => {
   return (
-    <section id="skills" className="pt-10 pb-24">
+    <section id="skills" className="pt-10 pb-24 text-black dark:text-white">
       <div className="mt-36 md:flex md:justify-between ">
         <div>
           <motion.div
@@ -227,7 +227,7 @@ const Skiils = () => {
                 </text>
               </svg>
               <p className="mt-3 mb-8 text-xl font-semibold text-center font-playfair">
-                <span className="text-white">Communication</span>
+                <span className="dark:text-white">Communication</span>
               </p>
             </div>
 
@@ -267,7 +267,7 @@ const Skiils = () => {
                 </text>
               </svg>
               <p className="mt-3 mb-8 text-xl font-semibold text-center font-playfair">
-                <span className="text-white">Team Work</span>
+                <span className="dark:text-white">Team Work</span>
               </p>
             </div>
 
@@ -307,7 +307,7 @@ const Skiils = () => {
                 </text>
               </svg>
               <p className="mt-3 mb-8 text-xl font-semibold text-center font-playfair">
-                <span className="text-white"> Problem Solving</span>
+                <span className="dark:text-white"> Problem Solving</span>
               </p>
             </div>
 
@@ -347,7 +347,7 @@ const Skiils = () => {
                 </text>
               </svg>
               <p className="mt-3 mb-8 text-xl font-semibold text-center font-playfair">
-                <span className="text-white">Creativity</span>
+                <span className="dark:text-white">Creativity</span>
               </p>
             </div>
           </motion.div>

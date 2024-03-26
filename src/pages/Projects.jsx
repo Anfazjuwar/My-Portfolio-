@@ -40,7 +40,7 @@ const Project = ({ title, imges, about }) => {
 };
 const Projects = () => {
   return (
-    <section id="projects" className="pt-48 pb-48 ">
+    <section id="projects" className="pt-48 pb-48 text-black dark:text-white">
       {/* heading */}
       <motion.div
         className="mx-auto mb-8 text-center md:w-2-4"

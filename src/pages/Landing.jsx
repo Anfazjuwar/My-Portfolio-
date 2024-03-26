@@ -11,7 +11,7 @@ const Landing = ({ setSelectedPage, selectedPage }) => {
   return (
     <section
       id="home"
-      className="gap-16 py-10 md:flex md:justify-between md:items-center md:h-full"
+      className="gap-16 py-10 text-black md:flex md:justify-between md:items-center md:h-full dark:text-white"
     >
       {/* main section */}
       <div className="z-30 mt-20 ml-18 md:ml-24 basis-2/5 md:mt-32">
@@ -26,15 +26,25 @@ const Landing = ({ setSelectedPage, selectedPage }) => {
           }}
         >
           <p className="z-10 text-6xl text-center font-playfair md:text-start">
-            Anfaz
-            <span className=" xs:font-semibold text-red">Juwar</span>
+            Hi,
+            <span className="text-5xl xs:font-semibold">It's Me</span>
           </p>
-          <p className="mt-10 text-xl text-center text-red mb-7 md:text-start">
+          <p className="z-10 text-center text-8xl font-playfair md:text-start">
+            i'm
+            <span className=" xs:font-semibold text-red"> Anfaz </span>
+          </p>
+          <p className="flex items-center justify-center mt-4 mb-8 text-2xl text-centermb-7 md:text-start md:items start md:flex md:justify-start">
             <TypeAnimation
               sequence={[
-                "Full Stack Devoloper", // initially rendered starting point
+                " MERN Stack Developer", // initially rendered starting point
+                1000,
+                "MongoDB",
                 500,
-                "Full Stack Devoloper",
+                "Express",
+                500,
+                "React",
+                500,
+                "Node",
                 500,
               ]}
               speed={0}
@@ -55,19 +65,20 @@ const Landing = ({ setSelectedPage, selectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <AnchorLink
-            href="#contact"
+          <a
             className="py-3 font-semibold transition duration-500 rounded-sm px-7 bg-gradient-rainblue text-deep-blue hover:bg-blue hover:text-white"
-            onClick={() => setSelectedPage("contact")}
+            href="https://api.whatsapp.com/send?phone=0757194319"
+            target="_blank"
+            rel="noreferrer"
           >
             Contact Me
-          </AnchorLink>
+          </a>
           <AnchorLink
             href="#contact"
             className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
             onClick={() => setSelectedPage("contact")}
           >
-            <div className="flex items-center justify-center w-full h-full px-10 duration-500 bg-deep-blue hover:text-red transtion font-playfair ">
+            <div className="flex items-center justify-center w-full h-full px-10 duration-500 dark:bg-deep-blue hover:dark:text-red transtion font-playfair ">
               Let's talk.
             </div>
           </AnchorLink>

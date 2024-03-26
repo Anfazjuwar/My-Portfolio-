@@ -2,7 +2,7 @@
 import flowbitePlugin from "flowbite/plugin";
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-
+  darkMode: "class",
   mode: "jit",
   theme: {
     extend: {
@@ -37,5 +37,5 @@ export default {
       md: "1060px",
     },
   },
-  plugins: [flowbitePlugin, require("daisyui")],
+  plugins: [flowbitePlugin],
 };

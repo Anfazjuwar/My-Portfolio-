@@ -44,11 +44,11 @@ const Contact = () => {
       );
   };
   return (
-    <section id="contact" className="py-48">
+    <section id="contact" className="py-48 text-black dark:text-white">
       {showMessageAlert && <Messgealert />}
       {/* Heading */}
       <motion.div
-        className="flex justify-end w-full"
+        className="flex items-center justify-center w-full"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -68,24 +68,7 @@ const Contact = () => {
         </div>
       </motion.div>
       {/* form and img */}
-      <div className="gap-16 mt-5 md:flex md:justify-between">
-        <motion.div
-          className="flex justify-center basis-1/2"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
-        >
-          <img
-            src={img1}
-            alt="contact"
-            className="shadow-md rounded-3xl saturate-200 shadow-red"
-          />
-        </motion.div>
+      <div className="gap-24 mt-5 md:flex md:justify-center md:items-center">
         <motion.div
           className="mt-10 basis-1/2 md:mt-0"
           initial="hidden"

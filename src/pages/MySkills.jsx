@@ -17,7 +17,7 @@ const MySkills = () => {
   // const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
   return (
-    <section id="about" className="pt-10 pb-24">
+    <section id="about" className="pt-10 pb-24 text-black dark:text-white">
       {/* HEADER AND IMAGE SECTION */}
       <div className="mt-32 md:flex md:justify-between md:gap-16">
         <div className="w-full md:w-1/2">
