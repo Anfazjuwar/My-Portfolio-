@@ -6,7 +6,6 @@ import Landing from "./pages/Landing";
 import LineGradient from "./componets/LineGradient";
 import MySkills from "./pages/MySkills";
 import Projects from "./pages/Projects";
-// import Testimonals from "./pages/Testimonals";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import Skiils from "./pages/Skiils";
@@ -44,11 +43,11 @@ function App() {
         )}
       </div>
       <Landing setSelectedPage={setSelectedPage} selectedPage={selectedPage} />
-      <LineGradient />
+
       <div className="w-5/6 mx-auto md:h-full ">
         <MySkills />
       </div>
-      {/* <LineGradient /> */}
+
       <div className="w-5/6 mx-auto md:h-full ">
         <Skiils />
       </div>
@@ -57,13 +56,10 @@ function App() {
         <Projects />
       </div>
 
-      {/* <div className="w-5/6 mx-auto ">
-        <Testimonals />
-      </div> */}
-      <LineGradient />
       <div className="w-5/6 mx-auto md:h-full ">
         <Contact />
       </div>
+
       <Footer />
     </div>
   );

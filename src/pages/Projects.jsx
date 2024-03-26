@@ -5,6 +5,7 @@ import img2 from "../assets/GYM.png";
 import img3 from "../assets/e-f.png";
 import img4 from "../assets/backend.png";
 import img5 from "../assets/hotel.png";
+import { FaGithub, FaInstagram } from "react-icons/fa6";
 
 const container = {
   hidden: {},
@@ -71,8 +72,16 @@ const Projects = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className=" uppercase flex justify-center text-center items-center p-10  max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
+          <div className=" uppercase gap-4 flex justify-center text-center items-center p-10  max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
             Completed PROJECTS
+            <a
+              className="transition duration-500 hover:opacity-50 "
+              href="https://github.com/Anfazjuwar"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub size={28} />
+            </a>
           </div>
           <Project
             title={"E-commerce"}
@@ -106,12 +115,26 @@ const Projects = () => {
             about={"Built using React,Tailwindcss"}
             imges={img5}
           />
-          {/* <Project title={"Project1"} imges={img1} />
-          <Project title={"Project1"} imges={img1} /> */}
         </motion.div>
       </div>
-      <div className="flex items-center justify-center mt-10 mb-4 text-2xl font-semibold text-center uppercase font-playfair">
+      <div className="flex items-center justify-center gap-4 mt-10 mb-4 text-2xl font-semibold text-center uppercase font-playfair">
         More Projects are coming <span className=" text-red">Soon!</span>
+        <a
+          className="transition duration-500 hover:opacity-50"
+          href="https://www.instagram.com/_anfaz_official/?igsh=YWdtbjEwZmM4MzBl"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaInstagram size={28} />
+        </a>
+        <a
+          className="transition duration-500 hover:opacity-50 "
+          href="https://github.com/Anfazjuwar"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaGithub size={28} />
+        </a>
       </div>
       <LineGradient className="mt-12" />
     </section>

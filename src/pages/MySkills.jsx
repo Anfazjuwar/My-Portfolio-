@@ -1,25 +1,30 @@
 import LineGradient from "../componets/LineGradient";
-import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
-import Skills from "../assets/cmimage.jpeg";
 import resume from "../assets/Resume.pdf";
-// import { useScroll, useTransform } from "framer-motion";
-// import { useRef } from "react";
+import Sliding from "./Sliding";
 
-const MySkills = () => {
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-
-  // const refs = useRef < HTMLDivElement > null;
-  // const { scrollYProgress } = useScroll({
-  //   target: "",
-  //   offset: ["0 1", "1.33 1"],
-  // });
-  // const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
-
+const MySkills = ({ setSelectedPage, selectedPage }) => {
   return (
     <section id="about" className="pt-10 pb-24 text-black dark:text-white">
       {/* HEADER AND IMAGE SECTION */}
-      <div className="mt-32 md:flex md:justify-between md:gap-16">
+      <div className="mt-32 md:flex md:justify-between md:gap-24">
+        <div className="w-full mt-5 md:items-center md:flex md:justify-center md:w-1/2">
+          <motion.div
+            className=""
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8 }}
+            variants={{
+              hidden: { opacity: 0, y: -50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div>
+              <Sliding />
+            </div>
+          </motion.div>
+        </div>
         <div className="w-full md:w-1/2">
           {" "}
           <motion.div
@@ -119,40 +124,6 @@ const MySkills = () => {
           </motion.div>
         </div>
         {/* image */}
-        <div className="w-full mt-5 md:items-center md:flex md:justify-center md:w-1/2">
-          <motion.div
-            className=""
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.8 }}
-            variants={{
-              hidden: { opacity: 0, y: -50 },
-              visible: { opacity: 1, y: 0 },
-            }}
-          >
-            <div>
-              {isAboveMediumScreens ? (
-                <div
-                  className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
-                before:w-full before:h-full before:border-2 before:border-blue before:z-[-1] before:rounded-lg before:shadow-xl before:shadow-red"
-                >
-                  <img
-                    alt="skills"
-                    className="z-10 rounded-2xl saturate-200"
-                    src={Skills}
-                  />
-                </div>
-              ) : (
-                <img
-                  alt="skills"
-                  className="z-10 rounded-2xl saturate-200"
-                  src={Skills}
-                />
-              )}
-            </div>
-          </motion.div>
-        </div>
       </div>
     </section>
   );

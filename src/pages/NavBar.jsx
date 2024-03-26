@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 import menuIcon from "../assets/menu-icon.svg";
-import closeIcon from "../assets/close-icon.svg";
+
 import { RiMenuFoldLine } from "react-icons/ri";
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
@@ -117,12 +117,7 @@ const NavBar = ({ isTopofPage, setSelectedPage, selectedPage }) => {
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            {/* hello */}
-            {/* <Link
-              page="Testimonials"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            /> */}
+
             <Link
               page="Contact"
               selectedPage={selectedPage}
@@ -144,27 +139,12 @@ const NavBar = ({ isTopofPage, setSelectedPage, selectedPage }) => {
             </div>
           </div>
         ) : (
-          <>
-            <div>
-              {options?.map((opt) => (
-                <button
-                  key={opt.text}
-                  onClick={() => setTheme(opt.text)}
-                  className={`w-8 h-8 m-1 text-xl leading-9 rounded-full text-sky-600  ${
-                    theme === opt.text && "text-sky-600"
-                  }`}
-                >
-                  <ion-icon name={opt.icon}></ion-icon>
-                </button>
-              ))}
-            </div>
-            <button
-              className="p-2 rounded-full bg-red"
-              onClick={() => setIsMenuToggled(!isMenuToggled)}
-            >
-              <img alt="'menu-icon" src={menuIcon} />
-            </button>
-          </>
+          <button
+            className="p-2 rounded-full bg-red"
+            onClick={() => setIsMenuToggled(!isMenuToggled)}
+          >
+            <img alt="'menu-icon" src={menuIcon} />
+          </button>
         )}
 
         {/* Mobile Menu pop */}
@@ -204,6 +184,19 @@ const NavBar = ({ isTopofPage, setSelectedPage, selectedPage }) => {
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
+              <div>
+                {options?.map((opt) => (
+                  <button
+                    key={opt.text}
+                    onClick={() => setTheme(opt.text)}
+                    className={`w-8 h-8 m-1 text-xl leading-9 rounded-full ${
+                      theme === opt.text && "text-sky-600"
+                    }`}
+                  >
+                    <ion-icon name={opt.icon}></ion-icon>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         )}
