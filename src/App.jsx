@@ -3,7 +3,6 @@ import useMediaQuery from "./hooks/useMediaQuery";
 import NavBar from "./pages/NavBar";
 import DotGroup from "./pages/DotGroup";
 import Landing from "./pages/Landing";
-import LineGradient from "./componets/LineGradient";
 import MySkills from "./pages/MySkills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
